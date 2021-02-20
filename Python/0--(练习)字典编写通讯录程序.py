@@ -16,6 +16,7 @@ while inpute != 4:
         name = input('请输入联系人姓名：')
         if name in data1.keys():
             print(data1[name])
+            continue
         else:
             print('未查找到此联系人，请插入新的联系人')
             continue
@@ -28,7 +29,7 @@ while inpute != 4:
             print('您输入的姓名在通讯录中已存在 -->> %s:%d'% (name,data1[name]))
             whether = input('是否修改用户资料（YES/NO）：')
             if whether == 'YES':
-                data1[name] = input('请输入联系电话：')
+                data1[name] = int(input('请输入联系电话：'))
                 print('联系人：%s --联系电话：%d 更新成功' % (name,data1[name]))
             elif whether == 'NO':
                 print('通讯录未修改')
